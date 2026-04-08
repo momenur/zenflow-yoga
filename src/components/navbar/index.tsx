@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
+import { AppLogo } from "../common-component";
 
 const Navbar = () => {
   const pathName: string = usePathname();
@@ -25,9 +26,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
-              JobPortal
-            </Link>
+            <AppLogo />
           </div>
 
           {/* Desktop Navigation */}
