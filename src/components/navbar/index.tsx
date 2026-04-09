@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-10/12 mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -56,17 +56,17 @@ const Navbar = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-white hover:bg-gray-500 hover:text-white cursor-pointer"
+                className="bg-white hover:bg-cyan-500 hover:text-white cursor-pointer"
               >
-                Login
+                <span className="mb-0.5">Login</span>
               </Button>
             </Link>
             <Link href="/sign-up">
               <Button
-                className="bg-blue-500 hover:bg-blue-700 text-white cursor-pointer"
+                className="bg-cyan-500 hover:bg-cyan-700 text-white cursor-pointer"
                 size="sm"
               >
-                Get Started
+                <span className="mb-0.5">Get Started</span>
               </Button>
             </Link>
           </div>
