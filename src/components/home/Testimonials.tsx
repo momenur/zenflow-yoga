@@ -1,5 +1,6 @@
 import React from "react";
 import { AppTitle } from "@/components/common-component";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -28,14 +29,19 @@ const testimonials = [
 export const Testimonials: React.FC = () => {
   return (
     <section className="bg-white py-16 sm:py-20 md:py-24 lg:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-5 md:px-8">
         <AppTitle title="Testimonials" subtitle="What People Are Saying" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="text-left bg-gray-50 p-4 sm:p-6 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              className={cn(
+                "text-left bg-gray-50 p-4 sm:p-6 rounded-lg hover:bg-gray-100 transition-colors duration-300",
+                {
+                  "sm:col-span-2 lg:col-span-1": index === 2,
+                },
+              )}
             >
               <blockquote className="text-gray-700 italic mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">
                 &quot;{testimonial.quote}&quot;

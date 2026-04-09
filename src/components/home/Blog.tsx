@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { AppTitle } from "@/components/common-component";
+import { cn } from "@/lib/utils";
 
 const blogPosts = [
   {
@@ -29,14 +30,17 @@ const blogPosts = [
 export const Blog: React.FC = () => {
   return (
     <section className="bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-5 md:px-8">
         <AppTitle title="Our Blog" subtitle="Latest Articles" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {blogPosts.map((post, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className={cn(
+                "bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300",
+                index === 2 ? "sm:col-span-2 lg:col-span-1" : "",
+              )}
             >
               <Image
                 src={post.image}

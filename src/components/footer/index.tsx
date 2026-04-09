@@ -18,12 +18,12 @@ const Footer: React.FC = () => {
         </span>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 xl:py-24">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8 py-12 sm:py-16 lg:py-20 xl:py-24">
         {/* Main footer content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16">
           {/* Logo and description */}
           <div className="space-y-4 sm:space-y-6 sm:col-span-2 lg:col-span-1">
-            <AppLogo className="scale-110" />
+            <AppLogo />
             <p className="text-slate-300 leading-relaxed max-w-xs text-sm sm:text-base">
               Transform your mind and body through the ancient practice of yoga.
               Join our community and discover inner peace, strength, and

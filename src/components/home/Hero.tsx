@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute -bottom-8 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-2000"></div>
 
-      <div className="max-w-7xl mx-auto px-4  relative z-10 py-16 sm:py-20 md:py-24 lg:py-28">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10 py-16 sm:py-20 md:py-24 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <AnimateOnScroll className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             <div className="inline-block">

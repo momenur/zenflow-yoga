@@ -46,7 +46,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
   return (
     <section className="bg-white py-28">
-      <div className="container mx-auto px-4 max-w-10/12">
+      <div className="mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
           <h3 className="text-2xl font-semibold text-gray-700 mb-6">
