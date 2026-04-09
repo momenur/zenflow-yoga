@@ -1,12 +1,26 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { yogaBlogPosts } from "./helpers/uiData";
+import { AppLoader } from "@/components/common-component";
 
 interface BlogPageProps {
   page?: number;
 }
 
 export default function BlogPage({ page = 1 }: BlogPageProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, [page]);
   const postsPerPage = 9;
   const totalPages = Math.ceil(yogaBlogPosts.length / postsPerPage);
   const currentPage = Math.min(Math.max(page, 1), totalPages);
@@ -18,15 +32,17 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
 
   return (
     <section className="bg-gray-50 py-16">
+      <AppLoader isLoading={isLoading} size="lg" text="Loading blog posts..." />
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-12 mt-10">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Yoga Blog</h1>
-          <p className="text-lg text-gray-600">
-            Discover insights, practices, and wisdom from the world of yoga
-          </p>
-        </div>
+        <div className={`transition-opacity duration-500 ${isLoading ? "opacity-30" : "opacity-100"}`}>
+          <div className="text-center mb-12 mt-10">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Yoga Blog</h1>
+            <p className="text-lg text-gray-600">
+              Discover insights, practices, and wisdom from the world of yoga
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visiblePosts.map((post) => (
             <div
               key={post.id}
@@ -98,6 +114,7 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
           >
             Next
           </Link>
+        </div>
         </div>
       </div>
     </section>
