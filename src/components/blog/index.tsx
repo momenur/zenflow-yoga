@@ -31,9 +31,9 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
   const paginationPages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-16 !min-h-screen">
       <AppLoader isLoading={isLoading} size="lg" text="Loading blog posts..." />
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto max-w-7xl px-5 md:px-8">
         <div
           className={`transition-opacity duration-500 ${isLoading ? "opacity-30" : "opacity-100"}`}
         >
