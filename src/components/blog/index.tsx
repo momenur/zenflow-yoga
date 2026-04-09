@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { yogaBlogPosts } from "./helpers/uiData";
-import { AppLoader } from "@/components/common-component";
+import { AppLoader, AppTitle } from "@/components/common-component";
 
 interface BlogPageProps {
   page?: number;
@@ -38,10 +38,10 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
           className={`transition-opacity duration-500 ${isLoading ? "opacity-30" : "opacity-100"}`}
         >
           <div className="text-center mb-12 mt-10">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Yoga Blog</h1>
-            <p className="text-lg text-gray-600">
-              Discover insights, practices, and wisdom from the world of yoga
-            </p>
+            <AppTitle
+              title="Yoga Blog"
+              subtitle="Discover insights, practices, and wisdom from the world of yoga  "
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -67,7 +67,7 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
                   </p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200"
+                    className="inline-block bg-cyan-600 text-white px-4 py-2 rounded-md hover:bg-cyan-700 transition-colors duration-200"
                   >
                     Read More
                   </Link>
@@ -81,8 +81,8 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
               href={currentPage > 1 ? `/blog/page/${currentPage - 1}` : "/blog"}
               className={`px-4 py-2 rounded-md border transition ${
                 currentPage === 1
-                  ? "cursor-not-allowed opacity-50"
-                  : "bg-white hover:bg-gray-100"
+                  ? "cursor-not-allowed opacity-50 border-cyan-500"
+                  : "bg-white hover:bg-cyan-600 hover:text-white hover:border-cyan-600"
               }`}
             >
               Previous
@@ -92,10 +92,10 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
               <Link
                 key={pageNumber}
                 href={pageNumber === 1 ? "/blog" : `/blog/page/${pageNumber}`}
-                className={`px-4 py-2 rounded-md border transition ${
+                className={`px-4 py-2 rounded-md border border-cyan-600 transition ${
                   pageNumber === currentPage
-                    ? "bg-blue-600 text-white"
-                    : "bg-white hover:bg-gray-100"
+                    ? "bg-cyan-600 text-white"
+                    : "bg-white hover:bg-cyan-600 hover:text-white hover:border-cyan-600"
                 }`}
               >
                 {pageNumber}
@@ -108,10 +108,10 @@ export default function BlogPage({ page = 1 }: BlogPageProps) {
                   ? `/blog/page/${currentPage + 1}`
                   : `/blog/page/${totalPages}`
               }
-              className={`px-4 py-2 rounded-md border transition ${
+              className={`px-4 py-2 rounded-md border border-cyan-600 transition ${
                 currentPage === totalPages
-                  ? "cursor-not-allowed opacity-50"
-                  : "bg-white hover:bg-gray-100"
+                  ? "cursor-not-allowed opacity-50 border-cyan-500"
+                  : "bg-white hover:bg-cyan-600 hover:text-white hover:border-cyan-600"
               }`}
             >
               Next
