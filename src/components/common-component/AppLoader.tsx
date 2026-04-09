@@ -55,13 +55,17 @@ const AppLoader: React.FC<AppLoaderProps> = ({
           ></div>
 
           {/* Center dot */}
-          <div className={`${sizeClasses[size]} flex items-center justify-center`}>
+          <div
+            className={`${sizeClasses[size]} flex items-center justify-center`}
+          >
             <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400"></div>
           </div>
         </div>
 
         {/* Loading text */}
-        <p className={`${textClasses[size]} text-gray-700 font-medium text-center`}>
+        <p
+          className={`${textClasses[size]} text-gray-700 font-medium text-center`}
+        >
           {text}
         </p>
 
