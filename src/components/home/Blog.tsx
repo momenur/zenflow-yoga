@@ -28,29 +28,31 @@ const blogPosts = [
 
 export const Blog: React.FC = () => {
   return (
-    <section className="bg-gray-100 py-28">
-      <div className="container mx-auto px-4 max-w-10/12">
+    <section className="bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <AppTitle title="Our Blog" subtitle="Latest Articles" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {blogPosts.map((post, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <Image
                 src={post.image}
                 alt={post.title}
                 width={400}
                 height={250}
-                className="w-full"
+                className="w-full h-40 sm:h-48 object-cover"
               />
-              <div className="p-6">
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              <div className="p-4 sm:p-6">
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 sm:mb-3 line-clamp-2">
                   {post.title}
                 </h4>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base line-clamp-3">
+                  {post.excerpt}
+                </p>
+                <p className="text-gray-500 text-xs sm:text-sm">
                   {post.comments} Comments
                 </p>
               </div>

@@ -27,20 +27,23 @@ const testimonials = [
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="bg-white py-28">
-      <div className="container mx-auto px-4 max-w-10/12">
+    <section className="bg-white py-16 sm:py-20 md:py-24 lg:py-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <AppTitle title="Testimonials" subtitle="What People Are Saying" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="text-left bg-gray-50 p-6 rounded-lg">
-              <blockquote className="text-gray-700 italic mb-4">
+            <div
+              key={index}
+              className="text-left bg-gray-50 p-4 sm:p-6 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            >
+              <blockquote className="text-gray-700 italic mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">
                 &quot;{testimonial.quote}&quot;
               </blockquote>
-              <div className="text-gray-800 font-semibold">
+              <div className="text-gray-800 font-semibold text-sm sm:text-base">
                 {testimonial.author}
               </div>
-              <div className="text-gray-500 text-sm">
+              <div className="text-gray-500 text-xs sm:text-sm">
                 {testimonial.position}, {testimonial.company}
               </div>
             </div>

@@ -18,36 +18,36 @@ const Footer: React.FC = () => {
         </span>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-24">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 xl:py-24">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16">
           {/* Logo and description */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 sm:col-span-2 lg:col-span-1">
             <AppLogo className="scale-110" />
-            <p className="text-slate-300 leading-relaxed max-w-xs">
+            <p className="text-slate-300 leading-relaxed max-w-xs text-sm sm:text-base">
               Transform your mind and body through the ancient practice of yoga.
               Join our community and discover inner peace, strength, and
               balance.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               <a
                 href="#"
                 aria-label="Instagram"
-                className="group p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="group p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="#"
                 aria-label="Behance"
-                className="group p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
+                className="group p-2 sm:p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
               >
                 <svg
                   width="20"
@@ -142,22 +142,22 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter/CTA Section */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 mb-12">
-          <div className="text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12">
+          <div className="text-center space-y-4 sm:space-y-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
               Ready to Start Your Yoga Journey?
             </h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
+            <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
               Join our community and discover the transformative power of yoga.
               Book your first class today and experience the zenFlow difference.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm text-sm sm:text-base"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-cyan-500 text-slate-950 font-bold rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+              <button className="px-4 sm:px-6 py-3 bg-gradient-to-r from-cyan-400 to-cyan-500 text-slate-950 font-bold rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                 Get Started
               </button>
             </div>
@@ -165,20 +165,20 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/10">
-          <p className="text-slate-400 text-sm">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
+          <p className="text-slate-400 text-xs sm:text-sm text-center sm:text-left">
             © Copyright 2024. zenFlow Yoga. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             <a
               href="#"
-              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-xs sm:text-sm"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-xs sm:text-sm"
             >
               Terms & Conditions
             </a>
