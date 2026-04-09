@@ -12,13 +12,6 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10 py-16 sm:py-20 md:py-24 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <AnimateOnScroll className="space-y-6 sm:space-y-8 order-2 lg:order-1">
-            <div className="inline-block">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl text-xs sm:text-sm text-white font-medium hover:bg-white/20 transition-all duration-300">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                Welcome to Zenflow
-              </span>
-            </div>
-
             {/* Main heading */}
             <div className="space-y-3 sm:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight">
@@ -92,28 +85,6 @@ export const Hero: React.FC = () => {
               </div>
             </div>
           </AnimateOnScroll>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex flex-col items-center gap-1 sm:gap-2 text-white/60 hover:text-white/100 transition-colors duration-300">
-          <span className="text-xs sm:text-sm font-medium">
-            Scroll to explore
-          </span>
-          <svg
-            className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
         </div>
       </div>
     </section>
