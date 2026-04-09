@@ -46,7 +46,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
   return (
     <section className="bg-white py-28">
-      <div className="mx-auto px-4 max-w-7xl">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
           <h3 className="text-2xl font-semibold text-gray-700 mb-6">
@@ -54,8 +54,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">{description}</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div className="bg-gray-100 p-5 rounded">
             <h4 className="text-xl font-semibold text-gray-800 mb-6">
               Get In Touch
             </h4>
@@ -93,7 +93,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               </Button>
             </form>
           </div>
-          <div>
+          <div className="bg-purple-50 p-6 rounded">
             <h4 className="text-xl font-semibold text-gray-800 mb-6">
               Contact Information
             </h4>
