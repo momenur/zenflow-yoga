@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { yogaBlogPosts } from "../helpers/uiData";
+import { ArrowLeft } from "lucide-react";
 
 interface BlogDetailPageProps {
   params: {
@@ -25,23 +26,25 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
   }
 
   return (
-    <article className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 max-w-4xl py-16">
+    <article className="min-h-screen bg-gray-50">
+      <div className="container max-w-4xl px-4 py-16 mx-auto">
         {/* Header */}
-        <div className="mb-8 mt-10">
+        <div className="mt-10 mb-8">
           <Link
             href="/blog"
-            className="text-blue-600 hover:text-blue-800 mb-4 inline-block"
+            className="inline-block items-center gap-2.5 mb-4 text-gray-600 hover:text-blue-800"
           >
-            ← Back to Blog
+            <div className="flex items-center gap-2.5">
+              <ArrowLeft /> Back to Blog
+            </div>
           </Link>
-          <h1 className="text-4xl font-bold text-gray-600 mb-4">
+          <h1 className="mb-4 text-4xl font-bold text-gray-600">
             {post.title}
           </h1>
         </div>
 
         {/* Featured Image */}
-        <div className="relative h-96 mb-8 rounded-lg overflow-hidden">
+        <div className="relative mb-8 overflow-hidden rounded-lg h-96">
           <Image
             src="/images/blog/placeholder.png"
             alt={post.title}
@@ -51,10 +54,10 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
         </div>
 
         {/* Content */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+        <div className="p-8 mb-12 bg-white rounded-lg shadow-md">
           <div className="prose prose-lg max-w-none">
             {post.content.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+              <p key={index} className="mb-4 leading-relaxed text-gray-700">
                 {paragraph}
               </p>
             ))}
@@ -63,14 +66,14 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
 
         {/* Related Blogs */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+          <h2 className="mb-8 text-3xl font-bold text-gray-800">
             Related Articles
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {relatedBlogs.map((relatedPost) => (
               <div
                 key={relatedPost.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
               >
                 <div className="relative h-32">
                   <Image
@@ -81,12 +84,12 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-800 line-clamp-2">
                     {relatedPost.title}
                   </h3>
                   <Link
                     href={`/blog/${relatedPost.slug}`}
-                    className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                    className="text-sm font-medium text-blue-600 hover:text-blue-700"
                   >
                     Read More →
                   </Link>
