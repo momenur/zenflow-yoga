@@ -35,7 +35,7 @@ const AppTitle: React.FC<AppTitleProps> = ({
       <p className="mt-2 text-sm text-gray-600 sm:text-base">{subtitle}</p>
 
       {isBorder && (
-        <span className="block w-8 rounded-full h-0.5 sm:h-1 bg-cyan-400 mx-auto mt-2 sm:mt-3" />
+        <span className="block w-8 rounded-full h-0.5 sm:h-1 bg-cyan-200 mx-auto mt-2 sm:mt-3" />
       )}
     </div>
   );
