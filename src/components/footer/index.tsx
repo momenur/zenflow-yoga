@@ -6,25 +6,25 @@ import AppLogo from "../common-component/AppLogo";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-900 to-slate-950 text-white">
+    <footer className="relative overflow-hidden text-white bg-gradient-to-br from-slate-950 via-purple-900 to-slate-950">
       {/* Animated background elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-      <div className="absolute -bottom-8 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-2000"></div>
+      <div className="absolute top-0 bg-purple-500 rounded-full left-1/4 w-96 h-96 mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+      <div className="absolute rounded-full -bottom-8 right-1/4 w-96 h-96 bg-cyan-500 mix-blend-multiply filter blur-3xl opacity-10 animate-pulse delay-2000"></div>
 
       {/* Background oversized text */}
-      <div className="pointer-events-none absolute inset-0 flex items-end justify-center pb-16">
+      <div className="absolute inset-0 flex items-end justify-center pb-16 pointer-events-none">
         <span className="text-[6rem] text-center leading-[0.85] font-black uppercase tracking-[-0.08em] text-white/5 select-none md:text-[12rem] lg:text-[16rem]">
           zenFlow
         </span>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 md:px-8 py-12 sm:py-16 lg:py-20 xl:py-24">
+      <div className="relative px-5 py-12 mx-auto max-w-7xl md:px-8 sm:py-16 lg:py-20 xl:py-24">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 gap-8 mb-12 sm:grid-cols-2 lg:grid-cols-4 sm:gap-10 lg:gap-12 sm:mb-16">
           {/* Logo and description */}
           <div className="space-y-4 sm:space-y-6 sm:col-span-2 lg:col-span-1">
             <AppLogo />
-            <p className="text-slate-300 leading-relaxed max-w-xs text-sm sm:text-base">
+            <p className="max-w-xs text-sm leading-relaxed text-slate-300 sm:text-base">
               Transform your mind and body through the ancient practice of yoga.
               Join our community and discover inner peace, strength, and
               balance.
@@ -33,21 +33,21 @@ const Footer: React.FC = () => {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="group p-2 sm:p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 border group sm:p-3 rounded-xl bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 hover:scale-110"
               >
-                <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Instagram className="w-4 h-4 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="group p-2 sm:p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 border group sm:p-3 rounded-xl bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 hover:scale-110"
               >
-                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Linkedin className="w-4 h-4 sm:h-5 sm:w-5" />
               </a>
               <a
                 href="#"
                 aria-label="Behance"
-                className="group p-2 sm:p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 border group sm:p-3 rounded-xl bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/20 hover:border-white/30 hover:scale-110"
               >
                 <svg
                   width="20"
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="inline-block transition-colors duration-300 text-slate-300 hover:text-cyan-400 hover:translate-x-1"
                   >
                     {link.name}
                   </a>
@@ -123,8 +123,8 @@ const Footer: React.FC = () => {
                 <MapPin className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm font-semibold text-white">Indonesia</p>
-                  <p className="text-slate-300 text-sm">Jln. Bambu No. 375</p>
-                  <p className="text-slate-300 text-sm">
+                  <p className="text-sm text-slate-300">Jln. Bambu No. 375</p>
+                  <p className="text-sm text-slate-300">
                     Samarinda, Kalimantan Timur
                   </p>
                 </div>
@@ -133,8 +133,8 @@ const Footer: React.FC = () => {
                 <MapPin className="h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm font-semibold text-white">Hong Kong</p>
-                  <p className="text-slate-300 text-sm">60 Ya Fung Sung</p>
-                  <p className="text-slate-300 text-sm">San Tsuen, 75129</p>
+                  <p className="text-sm text-slate-300">60 Ya Fung Sung</p>
+                  <p className="text-sm text-slate-300">San Tsuen, 75129</p>
                 </div>
               </div>
             </div>
@@ -142,22 +142,22 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter/CTA Section */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12">
-          <div className="text-center space-y-4 sm:space-y-6">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
+        <div className="p-6 mb-8 border bg-white/5 backdrop-blur-xl border-white/10 rounded-2xl sm:p-8 sm:mb-12">
+          <div className="space-y-4 text-center sm:space-y-6">
+            <h2 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
               Ready to Start Your Yoga Journey?
             </h2>
-            <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+            <p className="max-w-2xl mx-auto text-sm text-slate-300 sm:text-base">
               Join our community and discover the transformative power of yoga.
               Book your first class today and experience the zenFlow difference.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col justify-center max-w-md gap-3 mx-auto sm:flex-row sm:gap-4">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm text-sm sm:text-base"
+                className="flex-1 px-4 py-3 text-sm text-white border bg-white/10 border-white/20 rounded-xl placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm sm:text-base"
               />
-              <button className="px-4 sm:px-6 py-3 bg-gradient-to-r from-cyan-400 to-cyan-500 text-slate-950 font-bold rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
+              <button className="px-4 py-3 text-sm font-bold transition-all duration-300 transform sm:px-6 bg-gradient-to-r from-cyan-400 to-cyan-500 text-slate-950 rounded-xl hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105 sm:text-base">
                 Get Started
               </button>
             </div>
@@ -165,20 +165,21 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
-          <p className="text-slate-400 text-xs sm:text-sm text-center sm:text-left">
-            © Copyright 2024. zenFlow Yoga. All rights reserved.
+        <div className="flex flex-col items-center justify-between gap-4 pt-6 border-t sm:flex-row sm:gap-6 sm:pt-8 border-white/10">
+          <p className="text-xs text-center text-slate-400 sm:text-sm sm:text-left">
+            © Copyright {new Date().getFullYear()}. zenFlow Yoga. All rights
+            reserved.
           </p>
           <div className="flex items-center gap-4 sm:gap-6">
             <a
               href="#"
-              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-xs sm:text-sm"
+              className="text-xs transition-colors duration-300 text-slate-400 hover:text-cyan-400 sm:text-sm"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-xs sm:text-sm"
+              className="text-xs transition-colors duration-300 text-slate-400 hover:text-cyan-400 sm:text-sm"
             >
               Terms & Conditions
             </a>
