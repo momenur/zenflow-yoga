@@ -71,18 +71,15 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 text-gray-700 transition-colors duration-300 bg-gray-200 rounded-md hover:text-gray-900 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500"
+              className="inline-flex items-center justify-center p-2 text-gray-700 transition-colors duration-300 bg-gray-200 rounded-md hover:text-gray-900 hover:bg-gray-300 focus:outline-none "
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <X className="block w-5 h-5 sm:h-6 sm:w-6" aria-hidden="true" />
-              ) : (
-                <Menu
-                  className="block w-5 h-5 sm:h-6 sm:w-6"
-                  aria-hidden="true"
-                />
-              )}
+
+              <Menu
+                className="block w-5 h-5 sm:h-6 sm:w-6"
+                aria-hidden="true"
+              />
             </button>
           </div>
         </div>
