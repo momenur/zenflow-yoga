@@ -29,13 +29,13 @@ const AppTitle: React.FC<AppTitleProps> = ({
 
   return (
     <div className={cn(className, getPositionClass())}>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-800 tracking-wider">
+      <h2 className="text-2xl font-medium tracking-wider text-gray-800 sm:text-3xl lg:text-4xl">
         {title}
       </h2>
-      <p className="text-sm sm:text-base text-gray-600 mt-2">{subtitle}</p>
+      <p className="mt-2 text-sm text-gray-600 sm:text-base">{subtitle}</p>
 
       {isBorder && (
-        <span className="block w-4 sm:w-5 rounded-full h-0.5 sm:h-1 bg-cyan-400 mx-auto mt-2 sm:mt-3" />
+        <span className="block w-8 rounded-full h-0.5 sm:h-1 bg-cyan-400 mx-auto mt-2 sm:mt-3" />
       )}
     </div>
   );
